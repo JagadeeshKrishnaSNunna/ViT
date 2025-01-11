@@ -1,0 +1,11 @@
+einops
+matplotlib
+matplotlib-inline
+numpy
+pandas
+scikit-learn
+seaborn
+torch
+torchaudio
+torchvision
+tqdm
