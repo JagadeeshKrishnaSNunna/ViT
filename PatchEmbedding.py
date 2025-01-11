@@ -28,7 +28,7 @@ class PatchEmbedding(nn.Module):
     batch_size=x.shape[0]
     patches=rearrange(x,'b c (nh ph) (nw pw) -> b (nh nw) (ph pw c)',ph=self.patch_height,pw=self.patch_width)
     out=self.patch_embed(patches)
-    out=torch.cat((repeat(self.cls,'x y -> b x y',b=batch_size),out),dim=1)
+    out=torch.cat((repeat(self.cls.to(x.device),'x y -> b x y',b=batch_size),out),dim=1)
     out+=self.pos_embed
     out=self.dropout(out)
     return out
