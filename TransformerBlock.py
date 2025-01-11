@@ -2,6 +2,7 @@ import torch
 from torch import nn
 from einops import rearrange,repeat
 
+from Attention import Attention
 
 class FCLayers(nn.Module):
   def __init__(self,config):
