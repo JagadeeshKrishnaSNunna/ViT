@@ -26,7 +26,7 @@ config={
     'num_classes':10,
     'fc_dropout':0.2,
     'lr':0.003,
-    'epoch':1
+    'epoch':140
 }
 
 model=ViT_Classifier(config).to(device)
