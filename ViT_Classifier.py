@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import torchvision
 import torchvision.transforms as transforms
 import tqdm
+from PatchEmbedding import PatchEmbedding
+from TransformerBlock import TransformerBlock
+
 
 class ViT_Classifier(nn.Module):
   def __init__(self,config):
