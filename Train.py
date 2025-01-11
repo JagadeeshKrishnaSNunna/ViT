@@ -79,6 +79,8 @@ print("f1-score: ",f1)
 
 sns.heatmap(confusionMatrix, annot=True, fmt='d', cmap='Blues', xticklabels=range(10), yticklabels=range(10))
 plt.xlabel('Predicted')
+
+torch.save(model.state_dict(), "model.pth")
 plt.ylabel('True')
 plt.title('Confusion Matrix')
 plt.savefig('Confusion_Matrix.png')
